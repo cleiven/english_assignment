@@ -22,6 +22,7 @@ body {
   color: black;
   font-family: "VT323", sans-serif;
   padding: 5px;
+  margin: 5px;
   border-radius: 3px;
 }
 .navigation > a:hover{ 
@@ -34,7 +35,7 @@ body {
 a.current {
   background-color: darkgreen;
 }
-.current:hover {
+.navigation > a.current:hover {
   transform: none;
 }
 .navigation {
@@ -46,14 +47,12 @@ a.current {
 }
 
 .maindiv {
-  width: 90%;
   margin: 0 auto;
   background-color: rgb(236, 254, 255);
   margin-top: 15px;
   min-height: 87vh;
   padding: 10px;
-  border: 3px solid black;
-  border-radius: 20px;
+  border: 7px solid #2fd113;
   image-rendering: pixelated;
 }
 .nextarrow {
