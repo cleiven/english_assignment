@@ -11,20 +11,20 @@ body {
   margin: 0px !important;
   padding: 0px !important;
   background-size: cover;
-  background-color: gray;
+  background-color: rgb(132, 132, 132);
   /*background-image: url(https://i.imgur.com/glWla8v.png); */ 
 }
 
-a {
-  background-color: white;
+.navigation > a {
+  border: 3px solid black;
   text-decoration: none;
+  border: 1px solid black;
   color: black;
   font-family: "VT323", sans-serif;
-  margin: 4px;
   padding: 5px;
-  border: 1px solid black;
+  border-radius: 3px;
 }
-a:hover{ 
+.navigation > a:hover{ 
   background-color:  #2fd113;
   animation-name: ascend; 
   animation-duration: 0.5s;
@@ -39,19 +39,21 @@ a.current {
 }
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 30px;
   padding: 3px;
 }
 
 .maindiv {
+  width: 90%;
+  margin: 0 auto;
   background-color: rgb(236, 254, 255);
-  margin-top: 5px;
+  margin-top: 15px;
   min-height: 87vh;
-  padding: 5px;
-  border: 30px solid transparent;
-  border-image: url("border-5.png") 10 round;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
   image-rendering: pixelated;
 }
 .nextarrow {
@@ -80,6 +82,7 @@ p {
   padding: 10px;
 }
 h1 {
+  animation: flip 1s;
   animation-duration: 1s;
   font-family: "VT323", sans-serif;
   border: 3px solid black;
@@ -90,18 +93,23 @@ h1 {
 }
 
 h2 {
+  /* width: fit-content; */
+  text-decoration: underline;
+  margin: auto;
+  padding: 10px;
+  width: fit-content;
   font-family: "VT323", sans-serif;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 h2.item {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0;
   text-align: left;
   font-size: 35px;
   animation-duration: 1s;
-}
-
-.item:hover {
-  color: red;
 }
 
 .cube {
@@ -180,6 +188,11 @@ s
 @keyframes fall_in {
   from {opacity: 0%; transform: translateY(-10px)};
   to {opacity: 100%; transform: translateY(0px)}
+}
+
+@keyframes flip {
+  from {transform: rotate3d(1, 0, 0, 180deg)};
+  to {transform: rotate3d(0, 0, 0, 0)}
 }
 
 @keyframes ascend {
