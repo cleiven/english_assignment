@@ -1,0 +1,193 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  margin: 0px !important;
+  padding: 0px !important;
+  background-size: cover;
+  background-color: gray;
+  /*background-image: url(https://i.imgur.com/glWla8v.png); */ 
+}
+
+a {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  font-family: "VT323", sans-serif;
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid black;
+}
+a:hover{ 
+  background-color:  #2fd113;
+  animation-name: ascend; 
+  animation-duration: 0.5s;
+  transform: translateY(-3px);
+}
+
+a.current {
+  background-color: darkgreen;
+}
+.current:hover {
+  transform: none;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 3px;
+}
+
+.maindiv {
+  background-color: rgb(236, 254, 255);
+  margin-top: 5px;
+  min-height: 87vh;
+  padding: 5px;
+  border: 30px solid transparent;
+  border-image: url("border-5.png") 10 round;
+  image-rendering: pixelated;
+}
+.nextarrow {
+  width: 128px;
+  height: 64px;
+  image-rendering: pixelated;
+  background-image: url("nextarrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.titlecard {
+  font-size: 20px;
+  width: 400px;
+  height: 50px;
+  align-self: center;
+  margin: auto;
+  image-rendering: pixelated;
+  background-image: url("title.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+p {
+  text-align: justify;
+  font-size: 23px;
+  padding: 10px;
+}
+h1 {
+  animation-duration: 1s;
+  font-family: "VT323", sans-serif;
+  border: 3px solid black;
+  background-color: #2fd113;
+
+  margin: 0;
+  font-size: 70px;
+}
+
+h2 {
+  font-family: "VT323", sans-serif;
+  font-size: 40px;
+}
+
+h2.item {
+  text-align: left;
+  font-size: 35px;
+  animation-duration: 1s;
+}
+
+.item:hover {
+  color: red;
+}
+
+.cube {
+  text-align: left;
+  
+}
+
+.cubecontainer {
+  animation: cube_rotate 5s linear infinite;
+  position: relative;
+  margin: 120px;
+  left: 0; 
+  right: 0; 
+  margin-inline: auto; 
+  width: fit-content;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: translateY(px);
+  /* transform:  rotate3d(1, 1, 0, 45deg); */
+}
+.cube1 {
+  position: absolute;
+  transform: translateZ(150px);
+  width: 300px; 
+  opacity: 50%;
+  height: 300px;
+  background-color: red;
+}
+
+.cube2 {
+  position: absolute;
+  transform: translateZ(-150px);
+  width: 300px; 
+  opacity: 50%;
+  height: 300px;
+  background-color: rgba(8, 0, 255, 0.634);
+}
+s
+.cube3 {
+  position: absolute;
+  transform: translateY(-150px) rotateX(90deg);
+  width: 300px; 
+  opacity: 50%;
+  height: 300px;
+  background-color: rgb(255, 208, 0);
+}
+
+.cube4 {
+  position: absolute;
+  transform: translateY(150px) rotateX(90deg);
+  width: 300px; 
+  opacity: 50%;
+  height: 300px;
+  background-color: rgb(0, 255, 13);
+}
+
+.cube5 {
+  transform: translateX(150px) rotateY(90deg);
+  position: absolute;
+  width: 300px; 
+  opacity: 50%;
+  height: 300px;
+  background-color: rgb(203, 3, 230);
+}
+
+.cube6 {
+  transform: translateX(-150px) rotateY(90deg);
+  position: absolute;
+  width: 300px; 
+  opacity: 25%;
+  height: 300px;
+  background-color: rgb(255, 0, 0);
+}
+
+@keyframes fall_in {
+  from {opacity: 0%; transform: translateY(-10px)};
+  to {opacity: 100%; transform: translateY(0px)}
+}
+
+@keyframes ascend {
+  from {transform: translateX(0px)};
+  to {transform: translateX(10px)}
+}
+
+@keyframes cube_rotate {
+  from {transform: rotate3d(0, 0, 0, 0);}
+  to {transform: rotate3d(1, 1, 1, 360deg);}
+}
